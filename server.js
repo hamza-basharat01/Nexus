@@ -56,6 +56,42 @@ app.get("/api/profile/:id", (req, res) => {
 
   res.json(user);
 });
+app.get("/api/investors", (req, res) => {
+  res.json([
+    {
+      id: 1,
+      name: "Ali Khan",
+      investment: "$50,000",
+    },
+  ]);
+});
+
+app.get("/api/entrepreneurs", (req, res) => {
+  res.json([
+    {
+      id: 1,
+      name: "Hamza",
+      startup: "Tech Startup",
+    },
+  ]);
+});
+
+app.get("/api/messages", (req, res) => {
+  res.json([
+    {
+      sender: "Ali",
+      message: "Hello",
+    },
+  ]);
+});
+
+app.get("/api/documents", (req, res) => {
+  res.json([
+    {
+      name: "Business Plan.pdf",
+    },
+  ]);
+});
 
 app.listen(5000, () => {
   console.log("Server Running On Port 5000");
